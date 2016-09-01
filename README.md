@@ -4,7 +4,9 @@ Current status: **alpha**.
 
 ## Description
 
-This is a beat for Oracle Database system and session metrics. Orabeat polls the Oracle `v$sysstat` and `v$sesstat` views for statistics.
+This is a beat for Oracle Database system and session metrics.
+
+Orabeat polls the Oracle `v$sysstat` and `v$sesstat` views for statistics.
 
 ## Prerequisites
 
@@ -41,9 +43,9 @@ Orabeat exports one JSON document for the system. For example:
     "sid":1,
     "stat_name":"redo size",
     "username":"",
-    "value":123456
+    "value":123456,
     "type":"sesstat"
-}    
+}
 ```
 
 ### Per-Session Statistics
@@ -51,9 +53,9 @@ Orabeat exports one JSON document for the system. For example:
 Orabeat exports one document per session. For example:
 
 
-More about beats platform: https://www.elastic.co/products/beats
+More about beats platform: [https://www.elastic.co/products/beats](https://www.elastic.co/products/beats)
 
-## To apply Orabeat template:
+## To apply Orabeat template
 
 ```bash
 curl -XPUT 'http://localhost:9200/_template/orabeat' -d@orabeat.template.json
